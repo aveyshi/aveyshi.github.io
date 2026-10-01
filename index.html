@@ -1,0 +1,1052 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Zhenhao Shi | Portfolio</title>
+
+    <style>
+        /* ===============================
+           GENERAL SETTINGS
+        ================================ */
+
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            scroll-behavior: smooth;
+        }
+
+        body {
+            font-family: Arial, Helvetica, sans-serif;
+            background-color: #ffffff;
+            color: #101828;
+            line-height: 1.6;
+        }
+
+        a {
+            text-decoration: none;
+            color: inherit;
+        }
+
+        /* ===============================
+           NAVIGATION BAR
+        ================================ */
+
+        .navbar {
+            width: 100%;
+            height: 78px;
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            padding: 0 7%;
+            border-bottom: 1px solid #eeeeee;
+            background-color: white;
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 18px;
+        }
+
+        .rbs {
+            font-size: 26px;
+            font-weight: 800;
+            color: #cc0033;
+        }
+
+        .divider {
+            height: 30px;
+            width: 1px;
+            background-color: #cccccc;
+        }
+
+        .portfolio-name {
+            font-size: 18px;
+            font-weight: 700;
+            color: #111827;
+        }
+
+        .nav-links {
+            display: flex;
+            align-items: center;
+            gap: 35px;
+        }
+
+        .nav-links a {
+            color: #475467;
+            font-size: 15px;
+            font-weight: 600;
+            transition: 0.3s;
+        }
+
+        .nav-links a:hover {
+            color: #cc0033;
+        }
+
+        .resume-button {
+            background-color: #111827;
+            color: white !important;
+            padding: 12px 23px;
+            border-radius: 30px;
+            transition: 0.3s;
+        }
+
+        .resume-button:hover {
+            background-color: #cc0033;
+        }
+
+        /* ===============================
+           HERO SECTION
+        ================================ */
+
+        .hero {
+            min-height: 610px;
+            background-color: #f8fafc;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 80px 8%;
+        }
+
+        .hero-container {
+            width: 100%;
+            max-width: 1250px;
+            display: grid;
+            grid-template-columns: 34% 66%;
+            align-items: center;
+            gap: 70px;
+        }
+
+        /* LEFT PROFILE */
+
+        .profile {
+            text-align: center;
+        }
+
+        .profile-image {
+            width: 220px;
+            height: 220px;
+            border-radius: 50%;
+            object-fit: cover;
+            object-position: center 20%;
+            background-color: white;
+            border: 5px solid white;
+            box-shadow: 0px 8px 30px rgba(0, 0, 0, 0.10);
+        }
+
+        .profile h2 {
+            margin-top: 25px;
+            font-size: 28px;
+            color: #101828;
+        }
+
+        .school {
+            color: #cc0033;
+            font-weight: 700;
+            margin-top: 5px;
+            font-size: 17px;
+        }
+
+        .major {
+            color: #667085;
+            font-size: 15px;
+            margin-top: 3px;
+        }
+
+        .class-year {
+            color: #667085;
+            font-size: 15px;
+            margin-top: 2px;
+        }
+
+        /* RIGHT INTRO */
+
+        .hero-content {
+            max-width: 820px;
+        }
+
+        .badge {
+            display: inline-block;
+            padding: 7px 16px;
+            background-color: #ffe4e8;
+            color: #a6192e;
+            border-radius: 30px;
+            font-size: 14px;
+            font-weight: 700;
+            margin-bottom: 25px;
+        }
+
+        .hero-content h1 {
+            font-size: 52px;
+            line-height: 1.08;
+            letter-spacing: -2px;
+            color: #0b1020;
+            max-width: 850px;
+        }
+
+        .statement {
+            margin-top: 27px;
+            font-size: 20px;
+            color: #475467;
+            line-height: 1.7;
+            max-width: 800px;
+        }
+
+        .hero-description {
+            margin-top: 15px;
+            font-size: 16px;
+            color: #667085;
+            max-width: 760px;
+        }
+
+        .hero-buttons {
+            margin-top: 35px;
+            display: flex;
+            align-items: center;
+            gap: 30px;
+            flex-wrap: wrap;
+        }
+
+        .email-button {
+            padding: 13px 25px;
+            border-radius: 30px;
+            background-color: white;
+            border: 1px solid #d0d5dd;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .email-button:hover {
+            border-color: #cc0033;
+            color: #cc0033;
+        }
+
+        .text-link {
+            font-weight: 600;
+            color: #344054;
+        }
+
+        .text-link:hover {
+            color: #cc0033;
+        }
+
+        /* ===============================
+           SECTION GENERAL
+        ================================ */
+
+        .section {
+            max-width: 1250px;
+            margin: auto;
+            padding: 95px 8%;
+        }
+
+        .section-label {
+            color: #cc0033;
+            font-size: 14px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+            font-weight: 800;
+            margin-bottom: 8px;
+        }
+
+        .section h2 {
+            font-size: 38px;
+            color: #0b1020;
+            margin-bottom: 15px;
+        }
+
+        .section-description {
+            font-size: 17px;
+            color: #667085;
+            max-width: 730px;
+            margin-bottom: 45px;
+        }
+
+        /* ===============================
+           SKILLS
+        ================================ */
+
+        .skills-section {
+            background-color: white;
+        }
+
+        .skills-grid {
+            display: grid;
+            grid-template-columns: repeat(3, 1fr);
+            gap: 25px;
+        }
+
+        .skill-card {
+            padding: 30px;
+            border: 1px solid #eaecf0;
+            border-radius: 15px;
+            background-color: white;
+            transition: 0.3s;
+        }
+
+        .skill-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+            border-color: #cc0033;
+        }
+
+        .skill-icon {
+            width: 48px;
+            height: 48px;
+            background-color: #ffe4e8;
+            border-radius: 12px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin-bottom: 20px;
+            font-size: 22px;
+        }
+
+        .skill-card h3 {
+            font-size: 20px;
+            margin-bottom: 12px;
+        }
+
+        .skill-card p {
+            color: #667085;
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        .skills-tags {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 15px;
+        }
+
+        .tag {
+            font-size: 13px;
+            background-color: #f2f4f7;
+            color: #475467;
+            padding: 6px 11px;
+            border-radius: 20px;
+        }
+
+        /* ===============================
+           PROJECTS
+        ================================ */
+
+        .projects-background {
+            background-color: #f8fafc;
+        }
+
+        .projects-container {
+            max-width: 1250px;
+            margin: auto;
+            padding: 95px 8%;
+        }
+
+        .projects-grid {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 30px;
+            margin-top: 40px;
+        }
+
+        .project-card {
+            background-color: white;
+            border: 1px solid #eaecf0;
+            border-radius: 18px;
+            overflow: hidden;
+            transition: 0.3s;
+        }
+
+        .project-card:hover {
+            transform: translateY(-7px);
+            box-shadow: 0px 15px 35px rgba(0, 0, 0, 0.10);
+        }
+
+        .project-top {
+            min-height: 170px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+        }
+
+        .verizon-project {
+            background: linear-gradient(135deg, #cc0033, #8d001f);
+        }
+
+        .excel-project {
+            background: linear-gradient(135deg, #177a4c, #0c5133);
+        }
+
+        .project-symbol {
+            font-size: 36px;
+            font-weight: 800;
+            color: white;
+            text-align: center;
+        }
+
+        .project-content {
+            padding: 30px;
+        }
+
+        .project-type {
+            color: #cc0033;
+            font-size: 13px;
+            font-weight: 800;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+        }
+
+        .project-content h3 {
+            font-size: 24px;
+            margin-top: 8px;
+            margin-bottom: 15px;
+            color: #101828;
+        }
+
+        .project-content p {
+            color: #667085;
+            font-size: 15px;
+            line-height: 1.75;
+        }
+
+        .project-skills {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 8px;
+            margin-top: 20px;
+            margin-bottom: 25px;
+        }
+
+        .project-link {
+            display: inline-block;
+            font-weight: 700;
+            color: #101828;
+            transition: 0.3s;
+        }
+
+        .project-link:hover {
+            color: #cc0033;
+        }
+
+        /* ===============================
+           CONTACT
+        ================================ */
+
+        .contact {
+            text-align: center;
+            padding: 90px 8%;
+            background-color: #101828;
+            color: white;
+        }
+
+        .contact h2 {
+            font-size: 38px;
+            margin-bottom: 15px;
+        }
+
+        .contact p {
+            color: #cbd5e1;
+            font-size: 17px;
+            margin-bottom: 30px;
+        }
+
+        .contact-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 18px;
+            flex-wrap: wrap;
+        }
+
+        .contact-button {
+            padding: 13px 24px;
+            border-radius: 30px;
+            background-color: white;
+            color: #101828;
+            font-weight: 700;
+            transition: 0.3s;
+        }
+
+        .contact-button:hover {
+            background-color: #cc0033;
+            color: white;
+        }
+
+        /* ===============================
+           FOOTER
+        ================================ */
+
+        footer {
+            background-color: #090e1a;
+            color: #98a2b3;
+            text-align: center;
+            padding: 25px;
+            font-size: 14px;
+        }
+
+        /* ===============================
+           MOBILE RESPONSIVE
+        ================================ */
+
+        @media (max-width: 900px) {
+
+            .nav-links a:not(.resume-button) {
+                display: none;
+            }
+
+            .hero-container {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .hero-content {
+                margin: auto;
+            }
+
+            .hero-content h1 {
+                font-size: 39px;
+            }
+
+            .hero-buttons {
+                justify-content: center;
+            }
+
+            .skills-grid {
+                grid-template-columns: 1fr;
+            }
+
+            .projects-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        @media (max-width: 600px) {
+
+            .navbar {
+                padding: 0 5%;
+            }
+
+            .portfolio-name,
+            .divider {
+                display: none;
+            }
+
+            .hero {
+                padding: 60px 6%;
+            }
+
+            .profile-image {
+                width: 180px;
+                height: 180px;
+            }
+
+            .hero-content h1 {
+                font-size: 34px;
+            }
+
+            .statement {
+                font-size: 18px;
+            }
+
+            .section,
+            .projects-container {
+                padding: 70px 6%;
+            }
+        }
+    </style>
+</head>
+
+
+<body>
+
+    <!-- =========================
+         NAVIGATION
+    ========================== -->
+
+    <nav class="navbar">
+
+        <div class="logo">
+            <span class="rbs">RBS</span>
+
+            <div class="divider"></div>
+
+            <span class="portfolio-name">
+                Zhenhao's Portfolio
+            </span>
+        </div>
+
+        <div class="nav-links">
+            <a href="#about">About</a>
+            <a href="#skills">Skills</a>
+            <a href="#projects">Projects</a>
+
+            <a
+                href="resume.docx"
+                class="resume-button"
+                download
+            >
+                Download Resume
+            </a>
+        </div>
+
+    </nav>
+
+
+    <!-- =========================
+         HERO / ABOUT
+    ========================== -->
+
+    <section class="hero" id="about">
+
+        <div class="hero-container">
+
+            <!-- LEFT SIDE PROFILE -->
+
+            <div class="profile">
+
+                <img
+                    src="profile.png"
+                    alt="Zhenhao Shi"
+                    class="profile-image"
+                >
+
+                <h2>Zhenhao Shi</h2>
+
+                <p class="school">
+                    Rutgers Business School
+                </p>
+
+                <p class="major">
+                    Business Analytics & Information Technology
+                </p>
+
+                <p class="class-year">
+                    Class of 2029
+                </p>
+
+            </div>
+
+
+            <!-- RIGHT SIDE -->
+
+            <div class="hero-content">
+
+                <div class="badge">
+                    Business Analytics & Technology
+                </div>
+
+                <h1>
+                    Connecting business,
+                    data, and technology.
+                </h1>
+
+                <!-- PERSONAL STATEMENT -->
+
+                <p class="statement">
+                    Business Analytics and Information Technology student
+                    at Rutgers Business School interested in using data,
+                    technology, and business strategy to solve real-world problems.
+                </p>
+
+                <p class="hero-description">
+                    I am developing technical and business skills through
+                    coursework, hands-on data analysis, programming, and
+                    collaborative business projects. My experience includes
+                    Microsoft Excel, Python, Java, market research, team
+                    leadership, and business presentations.
+                </p>
+
+
+                <div class="hero-buttons">
+
+                    <a
+                        href="mailto:aveyshi@gmail.com"
+                        class="email-button"
+                    >
+                        Email Me
+                    </a>
+
+                    <a
+                        href="https://www.linkedin.com/in/zhenhao-shi-523836395"
+                        target="_blank"
+                        class="text-link"
+                    >
+                        LinkedIn Profile →
+                    </a>
+
+                    <a
+                        href="https://github.com/aveyshi"
+                        target="_blank"
+                        class="text-link"
+                    >
+                        GitHub →
+                    </a>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         SKILLS
+    ========================== -->
+
+    <section
+        class="section skills-section"
+        id="skills"
+    >
+
+        <div class="section-label">
+            Skills
+        </div>
+
+        <h2>
+            Skills & Tools
+        </h2>
+
+        <p class="section-description">
+            A combination of technical, analytical, and professional
+            skills developed through coursework and project experience.
+        </p>
+
+
+        <div class="skills-grid">
+
+            <!-- SKILL 1 -->
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    📊
+                </div>
+
+                <h3>
+                    Data Analysis
+                </h3>
+
+                <p>
+                    Experience using Microsoft Excel to organize,
+                    analyze, and visualize business and economic data.
+                </p>
+
+                <div class="skills-tags">
+                    <span class="tag">Excel</span>
+                    <span class="tag">PivotTables</span>
+                    <span class="tag">VLOOKUP</span>
+                    <span class="tag">Data Visualization</span>
+                    <span class="tag">Conditional Formatting</span>
+                </div>
+
+            </div>
+
+
+            <!-- SKILL 2 -->
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    💻
+                </div>
+
+                <h3>
+                    Programming
+                </h3>
+
+                <p>
+                    Foundational knowledge of programming concepts
+                    with experience writing basic programs in Python
+                    and Java.
+                </p>
+
+                <div class="skills-tags">
+                    <span class="tag">Python</span>
+                    <span class="tag">Java</span>
+                    <span class="tag">Programming Fundamentals</span>
+                </div>
+
+            </div>
+
+
+            <!-- SKILL 3 -->
+
+            <div class="skill-card">
+
+                <div class="skill-icon">
+                    📈
+                </div>
+
+                <h3>
+                    Business & Leadership
+                </h3>
+
+                <p>
+                    Experience working in teams, conducting market
+                    research, organizing projects, and presenting
+                    business recommendations.
+                </p>
+
+                <div class="skills-tags">
+                    <span class="tag">Leadership</span>
+                    <span class="tag">Market Research</span>
+                    <span class="tag">PowerPoint</span>
+                    <span class="tag">Presentation</span>
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         PROJECTS
+    ========================== -->
+
+    <section
+        class="projects-background"
+        id="projects"
+    >
+
+        <div class="projects-container">
+
+            <div class="section-label">
+                Projects
+            </div>
+
+            <h2>
+                Selected Projects
+            </h2>
+
+            <p class="section-description">
+                Projects demonstrating my experience with business
+                strategy, data analysis, teamwork, and technology.
+            </p>
+
+
+            <div class="projects-grid">
+
+                <!-- =====================
+                     PROJECT 1: VERIZON
+                ====================== -->
+
+                <div class="project-card">
+
+                    <div class="project-top verizon-project">
+
+                        <div class="project-symbol">
+                            Verizon × RBS
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <span class="project-type">
+                            Business Strategy
+                        </span>
+
+                        <h3>
+                            Verizon × Rutgers Business School
+                            Case Competition
+                        </h3>
+
+                        <p>
+                            Led a six-member team to develop a strategic
+                            business solution for Verizon within a
+                            10-day deadline. Conducted market and
+                            competitive analysis, coordinated project
+                            milestones, delegated responsibilities,
+                            and presented data-driven recommendations
+                            to judges.
+                        </p>
+
+
+                        <div class="project-skills">
+
+                            <span class="tag">
+                                Leadership
+                            </span>
+
+                            <span class="tag">
+                                Market Analysis
+                            </span>
+
+                            <span class="tag">
+                                Strategy
+                            </span>
+
+                            <span class="tag">
+                                Presentation
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="https://docs.google.com/document/d/1JZgw57VW5gDkGXQOAwaqyeyEv6Qnv0JFWGbKEoPUHV0/edit?usp=sharing"
+                            target="_blank"
+                            class="project-link"
+                        >
+                            View Project →
+                        </a>
+
+                    </div>
+
+                </div>
+
+
+
+                <!-- =====================
+                     PROJECT 2: EXCEL
+                ====================== -->
+
+                <div class="project-card">
+
+                    <div class="project-top excel-project">
+
+                        <div class="project-symbol">
+                            Excel Data Analysis
+                        </div>
+
+                    </div>
+
+
+                    <div class="project-content">
+
+                        <span class="project-type">
+                            Data Analytics
+                        </span>
+
+                        <h3>
+                            Excel Data Analysis Portfolio
+                        </h3>
+
+                        <p>
+                            Applied Microsoft Excel to organize,
+                            analyze, and visualize datasets across
+                            business, economic, and demographic topics.
+                            Practiced spreadsheet functions, data
+                            formatting, conditional formatting,
+                            sparklines, and data visualization using
+                            real-world datasets.
+                        </p>
+
+
+                        <div class="project-skills">
+
+                            <span class="tag">
+                                Microsoft Excel
+                            </span>
+
+                            <span class="tag">
+                                Data Analysis
+                            </span>
+
+                            <span class="tag">
+                                Data Visualization
+                            </span>
+
+                            <span class="tag">
+                                Spreadsheet Modeling
+                            </span>
+
+                        </div>
+
+
+                        <a
+                            href="excel-project.xlsx"
+                            class="project-link"
+                            download
+                        >
+                            View Excel Project →
+                        </a>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         CONTACT
+    ========================== -->
+
+    <section class="contact">
+
+        <h2>
+            Let's Connect
+        </h2>
+
+        <p>
+            Feel free to connect with me through LinkedIn,
+            GitHub, or email.
+        </p>
+
+
+        <div class="contact-buttons">
+
+            <a
+                href="mailto:aveyshi@gmail.com"
+                class="contact-button"
+            >
+                Email
+            </a>
+
+            <a
+                href="https://www.linkedin.com/in/zhenhao-shi-523836395"
+                target="_blank"
+                class="contact-button"
+            >
+                LinkedIn
+            </a>
+
+            <a
+                href="https://github.com/aveyshi"
+                target="_blank"
+                class="contact-button"
+            >
+                GitHub
+            </a>
+
+        </div>
+
+    </section>
+
+
+
+    <!-- =========================
+         FOOTER
+    ========================== -->
+
+    <footer>
+
+        © 2026 Zhenhao Shi |
+        Rutgers Business School
+
+    </footer>
+
+
+</body>
+
+</html>
